@@ -1,0 +1,20 @@
+<h1>Restoration Order</h1>
+
+<%= form_for :restoration, url: restorations_path do |f| %>
+  <p>
+    <%= f.label :instrument %><br>
+    <%= f.text_field :instrument %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+   <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', clients_path %>

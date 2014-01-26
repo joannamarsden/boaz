@@ -1,0 +1,33 @@
+<h1> Client List </h1>
+
+<table>
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+    <th>Email</th>
+    <th>Cell Number</th>
+    <th>Home Number</th>
+    <th>Mailing Address</th>
+    <th>Billing Address</th>
+    <th>New Orders</th>
+    <th>Restorations</th>
+    <th>All Orders</th>
+  </tr>
+
+  <% @clients.each do |client| %>
+    <tr>
+      <td><%= client.first_name %></td>
+      <td><%= client.last_name %></td>
+      <td><%= client.email %></td>
+      <td><%= client.cell_phone %></td>
+      <td><%= client.home_phone %></td>
+      <td><%= client.mailing_add %></td>
+      <td><%= client.billing_add %></td>
+      <td><%= link_to 'View', restorations_path %></td>
+      <td><%= link_to 'View', restorations_path %></td>
+      <td><%= link_to 'Show All', client_path(client.id) %></td>
+    </tr>
+  <% end %>
+
+</table>
+<%= link_to 'Add Client', new_client_path %>

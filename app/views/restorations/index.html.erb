@@ -1,0 +1,21 @@
+<h1>Restoration Work</h1>
+
+<table>
+  <tr>
+    <th>Instrument</th>
+    <th>Description</th>
+    <th>Price Offer</th>
+    <th>Client</th>
+  </tr>
+
+  <% @restorations.each do |restoration| %>
+    <tr>
+      <td><%= restoration.instrument %></td>
+      <td><%= restoration.description %></td>
+      <td><%= restoration.price_offer %></td>
+ 	  <td><%= "#{@client.first_name} #{@client.last_name}" %></td>
+    </tr>
+  <% end %>
+
+</table>
+<%= link_to 'Back', clients_path %>
